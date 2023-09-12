@@ -1,0 +1,55 @@
+<?xml  version='1.0' encoding='windows-1252' ?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="A31CEB6A-E" name="APM" version="1.0" notes="APM"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Business Layer" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="APM::APM_Organization(UML::Class)" type="" description="" unit="" values="" default="Organization"/>
+					<Tag name="APM::APM_Stakeholder(UML::Class)" type="" description="" unit="" values="" default="Stakeholder"/>
+					<Tag name="APM::APM_ITApplicationOwner(UML::Class)" type="" description="" unit="" values="" default="IT Application Owner"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Application Layer" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="APM::APM_ApplicationDomain(UML::Class)" type="" description="" unit="" values="" default="Application Domain"/>
+					<Tag name="APM::APM_ApplicationSubDomain(UML::Class)" type="" description="" unit="" values="" default="Application Sub Domain"/>
+					<Tag name="APM::APM_Application(UML::Component)" type="" description="" unit="" values="" default="Application"/>
+					<Tag name="APM::APM_ApplicationService(UML::Activity)" type="" description="" unit="" values="" default="Application Service"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Governance Layer" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="APM::APM_Project(UML::Class)" type="" description="" unit="" values="" default="Project"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Relationships" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="APM::Integrates(UML::Association)" type="" description="" unit="" values="" default="Integrates"/>
+					<Tag name="APM::BelongsTo(UML::Association)" type="" description="" unit="" values="" default="Belongs To"/>
+					<Tag name="APM::Owns(UML::Association)" type="" description="" unit="" values="" default="Owns"/>
+					<Tag name="APM::Uses(UML::Association)" type="" description="" unit="" values="" default="Uses"/>
+					<Tag name="APM::Impact(UML::Association)" type="" description="" unit="" values="" default="Impact"/>
+					<Tag name="APM::Provides(UML::Association)" type="" description="" unit="" values="" default="Provides"/>
+					<Tag name="APM::Consumes(UML::Association)" type="" description="" unit="" values="" default="Consumes"/>
+					<Tag name="APM::PartOf(UML::Aggregation)" type="" description="" unit="" values="" default="Part Of"/>
+				</TaggedValues>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>

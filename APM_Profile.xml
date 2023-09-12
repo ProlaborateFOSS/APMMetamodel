@@ -1,0 +1,187 @@
+<?xml  version='1.0' encoding='windows-1252' ?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="E08B293A-9" name="APM" version="1.0" notes="APM"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="APM_Application" metatype="Application" notes="" cx="0" cy="0" bgcolor="16777152" fontcolor="-1" bordercolor="-1" borderwidth="1" hideicon="0" generalizes="ArchiMate3::ArchiMate_ApplicationComponent" baseStereotypes="ArchiMate3::ArchiMate_ApplicationComponent">
+				<stereotypedrelationships>
+					<stereotypedrelationship stereotype="APM::BelongsTo" constraint="APM::APM_Organization"/>
+					<stereotypedrelationship stereotype="APM::Integrates" constraint="APM::APM_Application"/>
+					<stereotypedrelationship stereotype="APM::PartOf" constraint="APM::APM_ApplicationSubDomain"/>
+					<stereotypedrelationship stereotype="APM::Provides" constraint="APM::APM_ApplicationService"/>
+				</stereotypedrelationships>
+				<AppliesTo>
+					<Apply type="Component">
+						<Property name="isIndirectlyInstantiated" value="true"/>
+						<Property name="_HideUmlLinks" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="Application Complexity" type="" description="" unit="" values="" default=""/>
+					<Tag name="Application Type" type="" description="" unit="" values="" default=""/>
+					<Tag name="Audience Type" type="" description="" unit="" values="" default=""/>
+					<Tag name="Business Value" type="" description="" unit="" values="" default=""/>
+					<Tag name="Criticality" type="" description="" unit="" values="" default=""/>
+					<Tag name="Data Classification" type="" description="" unit="" values="" default=""/>
+					<Tag name="Environment" type="" description="" unit="" values="" default=""/>
+					<Tag name="Hosting Type" type="" description="" unit="" values="" default=""/>
+					<Tag name="Functional Fit" type="" description="" unit="" values="" default=""/>
+					<Tag name="Technical Fit" type="" description="" unit="" values="" default=""/>
+					<Tag name="Outlook" type="" description="" unit="" values="" default=""/>
+					<Tag name="Lifecycle" type="" description="" unit="" values="" default=""/>
+					<Tag name="Plan" type="" description="" unit="" values="" default=""/>
+					<Tag name="Go Live" type="" description="" unit="" values="" default=""/>
+					<Tag name="Active" type="" description="" unit="" values="" default=""/>
+					<Tag name="Sunset" type="" description="" unit="" values="" default=""/>
+					<Tag name="End of Life" type="" description="" unit="" values="" default=""/>
+					<Tag name="Number of Users" type="" description="" unit="" values="" default=""/>
+					<Tag name="Management Strategy" type="" description="" unit="" values="" default=""/>
+					<Tag name="Region" type="" description="" unit="" values="" default=""/>
+					<Tag name="Single Sign On" type="" description="" unit="" values="" default=""/>
+					<Tag name="Technology Risk" type="" description="" unit="" values="" default=""/>
+					<Tag name="Total Cost of Ownership" type="" description="" unit="" values="" default=""/>
+					<Tag name="Vendor" type="" description="" unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="APM_ApplicationDomain" metatype="Application Domain" notes="" cx="0" cy="0" bgcolor="16777152" fontcolor="-1" bordercolor="-1" borderwidth="1" hideicon="0" generalizes="ArchiMate3::ArchiMate_ApplicationCollaboration" baseStereotypes="ArchiMate3::ArchiMate_ApplicationCollaboration">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="true"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="APM_ApplicationService" metatype="Application Service" notes="" cx="0" cy="0" bgcolor="16777152" fontcolor="-1" bordercolor="-1" borderwidth="1" hideicon="0" generalizes="ArchiMate3::ArchiMate_ApplicationService" baseStereotypes="ArchiMate3::ArchiMate_ApplicationService">
+				<stereotypedrelationships>
+					<stereotypedrelationship stereotype="APM::Consumes" constraint="APM::APM_Application"/>
+				</stereotypedrelationships>
+				<AppliesTo>
+					<Apply type="Activity">
+						<Property name="isReadOnly" value="false"/>
+						<Property name="isSingleExecution" value=""/>
+						<Property name="parameterName" value=""/>
+						<Property name="postcondition" value=""/>
+						<Property name="precondition" value=""/>
+						<Property name="_HideUmlLinks" value="true"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="APM_ApplicationSubDomain" metatype="Application Sub Domain" notes="" cx="0" cy="0" bgcolor="16777152" fontcolor="-1" bordercolor="-1" borderwidth="1" hideicon="0" generalizes="ArchiMate3::ArchiMate_ApplicationCollaboration" baseStereotypes="ArchiMate3::ArchiMate_ApplicationCollaboration">
+				<stereotypedrelationships>
+					<stereotypedrelationship stereotype="APM::PartOf" constraint="APM::APM_ApplicationDomain"/>
+				</stereotypedrelationships>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="true"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="APM_ITApplicationOwner" metatype="IT Application Owner" notes="" cx="0" cy="0" bgcolor="12648447" fontcolor="-1" bordercolor="-1" borderwidth="1" hideicon="0" generalizes="ArchiMate3::ArchiMate_BusinessActor" baseStereotypes="ArchiMate3::ArchiMate_BusinessActor">
+				<stereotypedrelationships>
+					<stereotypedrelationship stereotype="APM::Owns" constraint="APM::APM_Application"/>
+				</stereotypedrelationships>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="true"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="APM_Organization" metatype="Organization" notes="" cx="0" cy="0" bgcolor="12648447" fontcolor="-1" bordercolor="-1" borderwidth="1" hideicon="0" generalizes="ArchiMate3::ArchiMate_BusinessActor" baseStereotypes="ArchiMate3::ArchiMate_BusinessActor">
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="true"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="APM_Project" metatype="Project" notes="" cx="0" cy="0" bgcolor="12632319" fontcolor="-1" bordercolor="-1" borderwidth="1" hideicon="0" generalizes="ArchiMate3::ArchiMate_WorkPackage" baseStereotypes="ArchiMate3::ArchiMate_WorkPackage">
+				<stereotypedrelationships>
+					<stereotypedrelationship stereotype="APM::Impact" constraint="APM::APM_Application"/>
+				</stereotypedrelationships>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="Project Total Cost" type="" description="" unit="" values="" default=""/>
+					<Tag name="Project Risk" type="" description="" unit="" values="" default=""/>
+					<Tag name="Project Lifecycle" type="" description="" unit="" values="" default=""/>
+					<Tag name="Plan" type="" description="" unit="" values="" default=""/>
+					<Tag name="Go Live" type="" description="" unit="" values="" default=""/>
+					<Tag name="Active" type="" description="" unit="" values="" default=""/>
+					<Tag name="Sunset" type="" description="" unit="" values="" default=""/>
+					<Tag name="Project Business Value" type="" description="" unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="APM_Stakeholder" metatype="Stakeholder" notes="" cx="0" cy="0" bgcolor="12648447" fontcolor="-1" bordercolor="-1" borderwidth="1" hideicon="0" generalizes="ArchiMate3::ArchiMate_BusinessRole" baseStereotypes="ArchiMate3::ArchiMate_BusinessRole">
+				<stereotypedrelationships>
+					<stereotypedrelationship stereotype="APM::Uses" constraint="APM::APM_Application"/>
+				</stereotypedrelationships>
+				<AppliesTo>
+					<Apply type="Class">
+						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="true"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="BelongsTo" metatype="Belongs To" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Association"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Consumes" metatype="Consumes" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Association"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Impact" metatype="Impact" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Association"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="Impact" type="" description="" unit="" values="" default=""/>
+					<Tag name="Priority" type="" description="" unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Integrates" metatype="Integrates" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Association"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="Integration Type" type="" description="" unit="" values="" default=""/>
+					<Tag name="Interface Mode" type="" description="" unit="" values="" default=""/>
+					<Tag name="Integration Status" type="" description="" unit="" values="" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Owns" metatype="Owns" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Association"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="PartOf" metatype="PartOf" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Aggregation">
+						<Property name="direction" value="Source -&gt; Destination"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Provides" metatype="Provides" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Association"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Uses" metatype="Uses" notes="" cx="0" cy="0" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Association"/>
+				</AppliesTo>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>
